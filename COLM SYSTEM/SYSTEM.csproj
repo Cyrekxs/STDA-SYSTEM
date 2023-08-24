@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCD29585-C0CC-4156-8C0F-8504F24DDD87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SEMS</RootNamespace>
+    <AssemblyName>SEMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>H:\COLM SYSTEM 2021\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://colm.edu.ph/SEMS/</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.71</MinimumRequiredVersion>
+    <ApplicationRevision>99</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9DF9311CF12BC70A3E8479965F76635E41113C98</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>COLM SYSTEM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sems.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assessment Folder\AssessmentReport.cs" />
+    <Compile Include="Assessment Folder\DataSets\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_direct_discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_direct_discount.Designer.cs">
+      <DependentUpon>frm_assessment_direct_discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_additional_fee_viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_additional_fee_viewer.Designer.cs">
+      <DependentUpon>frm_assessment_additional_fee_viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_dropping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_dropping.Designer.cs">
+      <DependentUpon>frm_assessment_dropping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_email_sender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_email_sender.Designer.cs">
+      <DependentUpon>frm_assessment_email_sender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_entry_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_entry_2.Designer.cs">
+      <DependentUpon>frm_assessment_entry_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_browser.Designer.cs">
+      <DependentUpon>frm_assessment_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_entry_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_entry_1.Designer.cs">
+      <DependentUpon>frm_assessment_entry_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_old_peeker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_old_peeker.Designer.cs">
+      <DependentUpon>frm_assessment_old_peeker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_schedule_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_schedule_browser.designer.cs">
+      <DependentUpon>frm_assessment_schedule_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_subject_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\frm_assessment_subject_browser.Designer.cs">
+      <DependentUpon>frm_assessment_subject_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment Folder\uc_assessment_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assessment Folder\uc_assessment_list.Designer.cs">
+      <DependentUpon>uc_assessment_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curriculum Folder\frm_curriculum_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curriculum Folder\frm_curriculum_entry.Designer.cs">
+      <DependentUpon>frm_curriculum_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curriculum Folder\frm_curriculum_subject_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curriculum Folder\frm_curriculum_subject_browser.Designer.cs">
+      <DependentUpon>frm_curriculum_subject_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curriculum Folder\uc_curriculum_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curriculum Folder\uc_curriculum_list.Designer.cs">
+      <DependentUpon>uc_curriculum_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ButtonRounded.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\uc_student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\uc_student.Designer.cs">
+      <DependentUpon>uc_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\uc_student_v2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\uc_student_v2.Designer.cs">
+      <DependentUpon>uc_student_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Folder\frm_discount_entry_amount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Folder\frm_discount_entry_amount.Designer.cs">
+      <DependentUpon>frm_discount_entry_amount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Folder\uc_discount_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Discounts Folder\uc_discount_list.Designer.cs">
+      <DependentUpon>uc_discount_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Faculty Folder\frm_faculty_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculty Folder\frm_faculty_browser.Designer.cs">
+      <DependentUpon>frm_faculty_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty Folder\frm_faculty_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculty Folder\frm_faculty_entry.Designer.cs">
+      <DependentUpon>frm_faculty_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty Folder\frm_faculty_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculty Folder\frm_faculty_list.Designer.cs">
+      <DependentUpon>frm_faculty_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_addtional_fee_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_addtional_fee_entry.Designer.cs">
+      <DependentUpon>frm_addtional_fee_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_default_fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_default_fees.Designer.cs">
+      <DependentUpon>frm_default_fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_miscother_fees_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_miscother_fees_entry.Designer.cs">
+      <DependentUpon>frm_miscother_fees_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_set_subject_amount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_set_subject_amount.Designer.cs">
+      <DependentUpon>frm_set_subject_amount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_1.Designer.cs">
+      <DependentUpon>frm_tuition_entry_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_additional_fee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_additional_fee.Designer.cs">
+      <DependentUpon>frm_tuition_entry_additional_fee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_browse_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_browse_subject.Designer.cs">
+      <DependentUpon>frm_tuition_entry_browse_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\uc_tuition_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\uc_tuition_list.Designer.cs">
+      <DependentUpon>uc_tuition_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loading_v3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loading_v3.Designer.cs">
+      <DependentUpon>frm_loading_v3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loading_v4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loading_v4.Designer.cs">
+      <DependentUpon>frm_loading_v4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_user_settings_sysem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_user_settings_sysem.Designer.cs">
+      <DependentUpon>frm_user_settings_sysem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grading System\ds_student_grade.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_student_grade.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Grading System\frm_browse_students_registered_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grading System\frm_browse_students_registered_dialog.Designer.cs">
+      <DependentUpon>frm_browse_students_registered_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grading System\frm_deanslister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grading System\frm_deanslister.Designer.cs">
+      <DependentUpon>frm_deanslister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grading System\frm_student_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grading System\frm_student_grade.Designer.cs">
+      <DependentUpon>frm_student_grade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\DataSet_SOA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_SOA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_creditmemo_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_creditmemo_entry.Designer.cs">
+      <DependentUpon>frm_payment_creditmemo_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_soa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_soa.Designer.cs">
+      <DependentUpon>frm_soa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_curriculum_shifting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_curriculum_shifting.Designer.cs">
+      <DependentUpon>frm_registration_curriculum_shifting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_grade_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_grade_report.Designer.cs">
+      <DependentUpon>frm_registration_grade_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_organization_email_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_organization_email_update.Designer.cs">
+      <DependentUpon>frm_registration_organization_email_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\DS_EnrollmentLists.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EnrollmentLists.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\Enrollment List\frm_enrollment_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\Enrollment List\frm_enrollment_list.Designer.cs">
+      <DependentUpon>frm_enrollment_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loading.Designer.cs">
+      <DependentUpon>frm_loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loading_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loading_v2.Designer.cs">
+      <DependentUpon>frm_loading_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_print_preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_print_preview.Designer.cs">
+      <DependentUpon>frm_print_preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_update_student_email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update_student_email.Designer.cs">
+      <DependentUpon>frm_update_student_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_whatsnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_whatsnew.Designer.cs">
+      <DependentUpon>frm_whatsnew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\DataSet_PaymentReceipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_PaymentReceipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_browse_fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_browse_fees.Designer.cs">
+      <DependentUpon>frm_browse_fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cash_additional_fee_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cash_additional_fee_entry.Designer.cs">
+      <DependentUpon>frm_payment_cash_additional_fee_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment.Designer.cs">
+      <DependentUpon>frm_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cash_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cash_entry.Designer.cs">
+      <DependentUpon>frm_payment_cash_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_center_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_center_entry.Designer.cs">
+      <DependentUpon>frm_payment_center_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_center_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_center_info.Designer.cs">
+      <DependentUpon>frm_payment_center_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cheque_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cheque_entry.Designer.cs">
+      <DependentUpon>frm_payment_cheque_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cheque_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\frm_payment_cheque_info.Designer.cs">
+      <DependentUpon>frm_payment_cheque_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Folder\uc_payers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payment Folder\uc_payers.Designer.cs">
+      <DependentUpon>uc_payers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Folder\uc_registered_students_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\uc_registered_students_list.Designer.cs">
+      <DependentUpon>uc_registered_students_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\DataSet_CollectionReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_CollectionReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\DataSet_Masterlist.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Masterlist.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\DataSet_StudentMasterListPerSubject.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_StudentMasterListPerSubject.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\frm_collection_report_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\frm_collection_report_v2.Designer.cs">
+      <DependentUpon>frm_collection_report_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\frm_enrollees_masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\frm_enrollees_masterlist.Designer.cs">
+      <DependentUpon>frm_enrollees_masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_master_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_master_list.Designer.cs">
+      <DependentUpon>frm_subject_master_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_master_list_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_master_list_v2.Designer.cs">
+      <DependentUpon>frm_subject_master_list_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_student_masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Folder\frm_subject_student_masterlist.Designer.cs">
+      <DependentUpon>frm_subject_student_masterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Section Folder\frm_browse_unlisted_subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Section Folder\frm_browse_unlisted_subjects.Designer.cs">
+      <DependentUpon>frm_browse_unlisted_subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_entry.Designer.cs">
+      <DependentUpon>frm_section_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_lists.Designer.cs">
+      <DependentUpon>frm_section_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_schedule_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Section Folder\frm_section_schedule_entry.Designer.cs">
+      <DependentUpon>frm_section_schedule_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\frm_assessment_payment_mode_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\frm_assessment_payment_mode_entry.Designer.cs">
+      <DependentUpon>frm_assessment_payment_mode_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\frm_assessment_payment_mode_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\frm_assessment_payment_mode_list.Designer.cs">
+      <DependentUpon>frm_assessment_payment_mode_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\frm_attachment_viewer_image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\frm_attachment_viewer_image.Designer.cs">
+      <DependentUpon>frm_attachment_viewer_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\frm_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\frm_settings.Designer.cs">
+      <DependentUpon>frm_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\frm_system_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\frm_system_settings.Designer.cs">
+      <DependentUpon>frm_system_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_requirements_entry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_requirements_entry.Designer.cs">
+      <DependentUpon>uc_requirements_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_requirement_lists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_requirement_lists.Designer.cs">
+      <DependentUpon>uc_requirement_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_assessment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_assessment.Designer.cs">
+      <DependentUpon>uc_settings_assessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail.Designer.cs">
+      <DependentUpon>uc_settings_mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail_templates_entry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail_templates_entry.Designer.cs">
+      <DependentUpon>uc_settings_mail_templates_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail_template_lists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_mail_template_lists.Designer.cs">
+      <DependentUpon>uc_settings_mail_template_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_school_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_school_information.Designer.cs">
+      <DependentUpon>uc_settings_school_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_target.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings Folder\uc_settings_target.Designer.cs">
+      <DependentUpon>uc_settings_target.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Student Information Folder\frm_student_information_online_entry_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\frm_student_information_online_entry_1.Designer.cs">
+      <DependentUpon>frm_student_information_online_entry_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Information Folder\frm_student_requirement_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\frm_student_requirement_entry.Designer.cs">
+      <DependentUpon>frm_student_requirement_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Information Folder\frm_student_requirement_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\frm_student_requirement_list.Designer.cs">
+      <DependentUpon>frm_student_requirement_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_applicants_unregistered.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_applicants_unregistered.Designer.cs">
+      <DependentUpon>uc_student_applicants_unregistered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_information_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_information_list.Designer.cs">
+      <DependentUpon>uc_student_information_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_information_list_online.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Information Folder\uc_student_information_list_online.Designer.cs">
+      <DependentUpon>uc_student_information_list_online.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject Folder\frm_subject_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subject Folder\frm_subject_entry.Designer.cs">
+      <DependentUpon>frm_subject_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees Folder\frm_tuition_entry_2.Designer.cs">
+      <DependentUpon>frm_tuition_entry_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject Folder\uc_subject_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject Folder\uc_subject_list.Designer.cs">
+      <DependentUpon>uc_subject_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DashBoard.Designer.cs">
+      <DependentUpon>UC_DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_transaction_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_transaction_dashboard.Designer.cs">
+      <DependentUpon>uc_transaction_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Folder\frm_user_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Folder\frm_user_entry.Designer.cs">
+      <DependentUpon>frm_user_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Folder\frm_user_lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Folder\frm_user_lists.Designer.cs">
+      <DependentUpon>frm_user_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Folder\frm_user_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Folder\frm_user_settings.Designer.cs">
+      <DependentUpon>frm_user_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilties.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration Folder\frm_registration_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_entry.Designer.cs">
+      <DependentUpon>frm_registration_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_browse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Folder\frm_registration_browse.Designer.cs">
+      <DependentUpon>frm_registration_browse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_additional_fee_viewer.resx">
+      <DependentUpon>frm_assessment_additional_fee_viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_direct_discount.resx">
+      <DependentUpon>frm_assessment_direct_discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_dropping.resx">
+      <DependentUpon>frm_assessment_dropping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_email_sender.resx">
+      <DependentUpon>frm_assessment_email_sender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_entry_2.resx">
+      <DependentUpon>frm_assessment_entry_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_browser.resx">
+      <DependentUpon>frm_assessment_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_entry_1.resx">
+      <DependentUpon>frm_assessment_entry_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_old_peeker.resx">
+      <DependentUpon>frm_assessment_old_peeker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_schedule_browser.resx">
+      <DependentUpon>frm_assessment_schedule_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\frm_assessment_subject_browser.resx">
+      <DependentUpon>frm_assessment_subject_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\rpt_payment_attachments.rdlc" />
+    <EmbeddedResource Include="Assessment Folder\rpt_assessment.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment Folder\rpt_payment_attachments_stda.rdlc" />
+    <EmbeddedResource Include="Assessment Folder\uc_assessment_list.resx">
+      <DependentUpon>uc_assessment_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curriculum Folder\frm_curriculum_entry.resx">
+      <DependentUpon>frm_curriculum_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curriculum Folder\frm_curriculum_subject_browser.resx">
+      <DependentUpon>frm_curriculum_subject_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curriculum Folder\uc_curriculum_list.resx">
+      <DependentUpon>uc_curriculum_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\uc_student.resx">
+      <DependentUpon>uc_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\uc_student_v2.resx">
+      <DependentUpon>uc_student_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Folder\frm_discount_entry_amount.resx">
+      <DependentUpon>frm_discount_entry_amount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Folder\uc_discount_list.resx">
+      <DependentUpon>uc_discount_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty Folder\frm_faculty_browser.resx">
+      <DependentUpon>frm_faculty_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty Folder\frm_faculty_entry.resx">
+      <DependentUpon>frm_faculty_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty Folder\frm_faculty_list.resx">
+      <DependentUpon>frm_faculty_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_addtional_fee_entry.resx">
+      <DependentUpon>frm_addtional_fee_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_default_fees.resx">
+      <DependentUpon>frm_default_fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_miscother_fees_entry.resx">
+      <DependentUpon>frm_miscother_fees_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_set_subject_amount.resx">
+      <DependentUpon>frm_set_subject_amount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_tuition_entry_1.resx">
+      <DependentUpon>frm_tuition_entry_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_tuition_entry_additional_fee.resx">
+      <DependentUpon>frm_tuition_entry_additional_fee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_tuition_entry_browse_subject.resx">
+      <DependentUpon>frm_tuition_entry_browse_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\uc_tuition_list.resx">
+      <DependentUpon>uc_tuition_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loading_v3.resx">
+      <DependentUpon>frm_loading_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loading_v4.resx">
+      <DependentUpon>frm_loading_v4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_user_settings_sysem.resx">
+      <DependentUpon>frm_user_settings_sysem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grading System\frm_browse_students_registered_dialog.resx">
+      <DependentUpon>frm_browse_students_registered_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grading System\frm_deanslister.resx">
+      <DependentUpon>frm_deanslister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grading System\frm_student_grade.resx">
+      <DependentUpon>frm_student_grade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grading System\rpt_student_grade.rdlc" />
+    <EmbeddedResource Include="Payment Folder\frm_payment_creditmemo_entry.resx">
+      <DependentUpon>frm_payment_creditmemo_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_soa.resx">
+      <DependentUpon>frm_soa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\rpt_soa.rdlc" />
+    <EmbeddedResource Include="Registration Folder\frm_registration_curriculum_shifting.resx">
+      <DependentUpon>frm_registration_curriculum_shifting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Folder\frm_registration_grade_report.resx">
+      <DependentUpon>frm_registration_grade_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Folder\frm_registration_organization_email_update.resx">
+      <DependentUpon>frm_registration_organization_email_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\Enrollment List\frm_enrollment_list.resx">
+      <DependentUpon>frm_enrollment_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loading.resx">
+      <DependentUpon>frm_loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loading_v2.resx">
+      <DependentUpon>frm_loading_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_print_preview.resx">
+      <DependentUpon>frm_print_preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_update_student_email.resx">
+      <DependentUpon>frm_update_student_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_whatsnew.resx">
+      <DependentUpon>frm_whatsnew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_browse_fees.resx">
+      <DependentUpon>frm_browse_fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment.resx">
+      <DependentUpon>frm_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_cash_additional_fee_entry.resx">
+      <DependentUpon>frm_payment_cash_additional_fee_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_cash_entry.resx">
+      <DependentUpon>frm_payment_cash_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_center_entry.resx">
+      <DependentUpon>frm_payment_center_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_center_info.resx">
+      <DependentUpon>frm_payment_center_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_cheque_entry.resx">
+      <DependentUpon>frm_payment_cheque_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\frm_payment_cheque_info.resx">
+      <DependentUpon>frm_payment_cheque_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Folder\rpt_payment_receipt.rdlc" />
+    <EmbeddedResource Include="Payment Folder\uc_payers.resx">
+      <DependentUpon>uc_payers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Folder\frm_registration_entry.resx">
+      <DependentUpon>frm_registration_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Folder\frm_registration_browse.resx">
+      <DependentUpon>frm_registration_browse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Folder\uc_registered_students_list.resx">
+      <DependentUpon>uc_registered_students_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\frm_collection_report_v2.resx">
+      <DependentUpon>frm_collection_report_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\frm_enrollees_masterlist.resx">
+      <DependentUpon>frm_enrollees_masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\frm_subject_master_list.resx">
+      <DependentUpon>frm_subject_master_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\frm_subject_master_list_v2.resx">
+      <DependentUpon>frm_subject_master_list_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\frm_subject_student_masterlist.resx">
+      <DependentUpon>frm_subject_student_masterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Folder\rpt_CollectionReport.rdlc" />
+    <EmbeddedResource Include="Reports Folder\rpt_enrollmentlists.rdlc" />
+    <EmbeddedResource Include="Reports Folder\rpt_masterlist.rdlc" />
+    <EmbeddedResource Include="Reports Folder\rpt_masterlist_per_subject.rdlc" />
+    <EmbeddedResource Include="Section Folder\frm_browse_unlisted_subjects.resx">
+      <DependentUpon>frm_browse_unlisted_subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section Folder\frm_section_entry.resx">
+      <DependentUpon>frm_section_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section Folder\frm_section_lists.resx">
+      <DependentUpon>frm_section_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section Folder\frm_section_schedule_entry.resx">
+      <DependentUpon>frm_section_schedule_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\frm_assessment_payment_mode_entry.resx">
+      <DependentUpon>frm_assessment_payment_mode_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\frm_assessment_payment_mode_list.resx">
+      <DependentUpon>frm_assessment_payment_mode_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\frm_attachment_viewer_image.resx">
+      <DependentUpon>frm_attachment_viewer_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\frm_settings.resx">
+      <DependentUpon>frm_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\frm_system_settings.resx">
+      <DependentUpon>frm_system_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_requirements_entry.resx">
+      <DependentUpon>uc_requirements_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_requirement_lists.resx">
+      <DependentUpon>uc_requirement_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_assessment.resx">
+      <DependentUpon>uc_settings_assessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_mail.resx">
+      <DependentUpon>uc_settings_mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_mail_templates_entry.resx">
+      <DependentUpon>uc_settings_mail_templates_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_mail_template_lists.resx">
+      <DependentUpon>uc_settings_mail_template_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_school_information.resx">
+      <DependentUpon>uc_settings_school_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Folder\uc_settings_target.resx">
+      <DependentUpon>uc_settings_target.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\frm_student_information_online_entry_1.resx">
+      <DependentUpon>frm_student_information_online_entry_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\frm_student_requirement_entry.resx">
+      <DependentUpon>frm_student_requirement_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\frm_student_requirement_list.resx">
+      <DependentUpon>frm_student_requirement_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\uc_student_applicants_unregistered.resx">
+      <DependentUpon>uc_student_applicants_unregistered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\uc_student_information_list.resx">
+      <DependentUpon>uc_student_information_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Information Folder\uc_student_information_list_online.resx">
+      <DependentUpon>uc_student_information_list_online.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject Folder\frm_subject_entry.resx">
+      <DependentUpon>frm_subject_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees Folder\frm_tuition_entry_2.resx">
+      <DependentUpon>frm_tuition_entry_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject Folder\uc_subject_list.resx">
+      <DependentUpon>uc_subject_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DashBoard.resx">
+      <DependentUpon>UC_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_transaction_dashboard.resx">
+      <DependentUpon>uc_transaction_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Folder\frm_user_entry.resx">
+      <DependentUpon>frm_user_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Folder\frm_user_lists.resx">
+      <DependentUpon>frm_user_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Folder\frm_user_settings.resx">
+      <DependentUpon>frm_user_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Assessment Folder\DataSets\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Assessment Folder\DataSets\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Assessment Folder\DataSets\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="COLM SYSTEM_TemporaryKey.pfx" />
+    <None Include="Grading System\ds_student_grade.xsc">
+      <DependentUpon>ds_student_grade.xsd</DependentUpon>
+    </None>
+    <None Include="Grading System\ds_student_grade.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_student_grade.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Grading System\ds_student_grade.xss">
+      <DependentUpon>ds_student_grade.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Payment Folder\DataSet_PaymentReceipt.xsc">
+      <DependentUpon>DataSet_PaymentReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Payment Folder\DataSet_PaymentReceipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_PaymentReceipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Payment Folder\DataSet_PaymentReceipt.xss">
+      <DependentUpon>DataSet_PaymentReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Payment Folder\DataSet_SOA.xsc">
+      <DependentUpon>DataSet_SOA.xsd</DependentUpon>
+    </None>
+    <None Include="Payment Folder\DataSet_SOA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_SOA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Payment Folder\DataSet_SOA.xss">
+      <DependentUpon>DataSet_SOA.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports Folder\DataSet_CollectionReport.xsc">
+      <DependentUpon>DataSet_CollectionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DataSet_CollectionReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_CollectionReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports Folder\DataSet_CollectionReport.xss">
+      <DependentUpon>DataSet_CollectionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DataSet_Masterlist.xsc">
+      <DependentUpon>DataSet_Masterlist.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DataSet_Masterlist.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Masterlist.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports Folder\DataSet_Masterlist.xss">
+      <DependentUpon>DataSet_Masterlist.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DataSet_StudentMasterListPerSubject.xsc">
+      <DependentUpon>DataSet_StudentMasterListPerSubject.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DataSet_StudentMasterListPerSubject.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_StudentMasterListPerSubject.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports Folder\DataSet_StudentMasterListPerSubject.xss">
+      <DependentUpon>DataSet_StudentMasterListPerSubject.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DS_EnrollmentLists.xsc">
+      <DependentUpon>DS_EnrollmentLists.xsd</DependentUpon>
+    </None>
+    <None Include="Reports Folder\DS_EnrollmentLists.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EnrollmentLists.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports Folder\DS_EnrollmentLists.xss">
+      <DependentUpon>DS_EnrollmentLists.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\colm logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Need to check before publish.txt" />
+    <Content Include="Nodes1.ico" />
+    <Content Include="Programmers Info\Notes.txt" />
+    <Content Include="Programmers Info\What I Did.txt" />
+    <None Include="Resources\Loading Image.jpg" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Female.png" />
+    <None Include="Resources\Male.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\pending.png" />
+    <None Include="Resources\complete.png" />
+    <None Include="Resources\no data.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Attachment.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\Send.png" />
+    <None Include="Resources\Data.png" />
+    <None Include="Resources\Data Process.png" />
+    <None Include="Resources\Data Delete.png" />
+    <None Include="Resources\Nodes.png" />
+    <None Include="Resources\User Settings.png" />
+    <None Include="Resources\Logout.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Document Edit.png" />
+    <None Include="Resources\Document Delete.png" />
+    <None Include="Resources\View.png" />
+    <None Include="Resources\Report.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Process.png" />
+    <None Include="Resources\Chart.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Account.png" />
+    <None Include="Resources\Duplicate.png" />
+    <None Include="Resources\Schedule.png" />
+    <None Include="Resources\Message-Edit.png" />
+    <None Include="Resources\Computer-Desktop.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Resources\buffering.gif" />
+    <Content Include="sems.ico" />
+    <None Include="Resources\NONITA NABONG.jpg" />
+    <None Include="Resources\Message.png" />
+    <None Include="Resources\Nodes1.png" />
+    <None Include="Resources\stda logo watermark.png" />
+    <None Include="Resources\Minus.png" />
+    <None Include="Resources\colm-system-icon.ico" />
+    <None Include="Resources\login background.png" />
+    <None Include="Resources\colm system icon.ico" />
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlServerTypes\x64\" />
+    <Folder Include="SqlServerTypes\x86\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COLM SYSTEM LIBRARY\LIBRARY.csproj">
+      <Project>{18018d8a-2a0d-4600-ba0f-a5cd73410d58}</Project>
+      <Name>LIBRARY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
